@@ -1,0 +1,21 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "Reverse Proxy for our application",
+  "main": "proxy.js",
+  "scripts": {
+    "start": "nodemon ./proxy.js",
+    "err": "ERR=TRUE nodemon ./proxy.js",
+    "prod": "PROD=TRUE pm2 start ./proxy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "http-proxy": "^1.16.2",
+    "http-proxy-rules": "^1.1.3",
+    "nodemon": "^1.14.11"
+  }
+}

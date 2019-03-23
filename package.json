@@ -1,0 +1,16 @@
+{
+  "name": "bestself",
+  "version": "0.0.1",
+  "description": "Reflected Best Self",
+  "main": "index.js",
+  "scripts": {
+    "start": "./bin/servers start"
+  },
+  "author": "BestSelf",
+  "license": "ISC",
+  "dependencies": {
+    "angular-font-awesome": "^3.1.2",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1"
+  }
+}

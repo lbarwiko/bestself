@@ -1,0 +1,8 @@
+*.log
+.DS_Store
+node_modules/
+logfile
+*.pyc
+*.pyc
+predictions_database/__pycache__/helper.cpython-35.pyc
+predictions_database/prettify_json.py

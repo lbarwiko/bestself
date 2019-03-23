@@ -1,0 +1,3 @@
+\c bestself;
+
+DROP TABLE IF EXISTS USERS CASCADE;

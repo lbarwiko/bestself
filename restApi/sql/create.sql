@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS bestself;
+CREATE DATABASE bestself;
+
+\c bestself;
+
+CREATE TABLE USERS(
+	user_id SERIAL PRIMARY KEY NOT NULL,
+	username VARCHAR(24) UNIQUE NOT NULL,
+	password VARCHAR(70) NOT NULL
+);
