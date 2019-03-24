@@ -61,7 +61,7 @@ class RequestFeedback extends Component{
             numberInput: event.target.value
         })
         console.log(event);
-    }  
+    }
 
     handleRelationChange(event){
         this.setState({
@@ -107,25 +107,27 @@ class RequestFeedback extends Component{
         var requests = this.state.requests.map(this.getRequestItem);
 
         return (
-            <div style={styles.wrapper}>
-                <Form
-                    
-                >
+            <article className='wrapper'>
+                
+                <Form>
                     <InputGroup style={styles.padDat}>
+                        <Form.Label style={styles.phoneLabel}>Phone Number</Form.Label>
                         <FormControl
                             placeholder="Feedback Giver's Phone #"
                             aria-label="Phone Number"
                             aria-describedby="basic-addon2"
-                            onChange={(event)=>this.handleNumberChange(event)} 
+                            onChange={(event)=>this.handleNumberChange(event)}
                         />
 
-                        <Form.Control 
+                        <Form.Control
                             as="select"
-                            onChange={(event)=>this.handleRelationChange(event)} 
+                            onChange={(event)=>this.handleRelationChange(event)}
                         >
                             <option>Peer</option>
-                            <option>Important Adult</option>
+                            <option>Family</option>
+                            <option>Trusted Adult</option>
                             <option>Crush</option>
+
                         </Form.Control>
                     </InputGroup>
                     {requests}
@@ -138,7 +140,7 @@ class RequestFeedback extends Component{
                         Submit
                     </Button>
                 </Form>
-            </div>
+            </article>
         );
      }
 }
@@ -150,12 +152,9 @@ const styles = {
     padDat:{
         paddingBottom: 30
     },
-    wrapper:{
-        paddingLeft: 60,
-        paddingRight: 60,
-        paddingTop:30,
-        justifyContent:'center', 
-        maxWidth: 600
+    phoneLabel:{
+        padding: 10,
+        color: 'white'
     }
 }
 
