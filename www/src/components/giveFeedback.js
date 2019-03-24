@@ -80,7 +80,7 @@ class giveFeedback extends Component{
 const styles = {
     header:{
       paddingTop: '10px',
-      color: '#8AE624';
+      color: '#8AE624'
     },
     buttons:{
       cursor: 'pointer',
