@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Container, ListGroup} from 'react-bootstrap';
 
-class Landing extends Component{
+class Methods extends Component{
 
     constructor(props){
         super();
@@ -22,4 +22,4 @@ class Landing extends Component{
      }
 }
 
-export default Landing;
+export default Methods;

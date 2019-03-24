@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {Container, ListGroup} from 'react-bootstrap';
 
-class Landing extends Component{
+class About extends Component{
 
     constructor(props){
         super();
@@ -15,11 +15,11 @@ class Landing extends Component{
     render(){
         return (
             <Container>
-                <h1>The Reflected Best Self</h1>
+                <h1>About Self Woke</h1>
 
             </Container>
         );
      }
 }
 
-export default Landing;
+export default About;

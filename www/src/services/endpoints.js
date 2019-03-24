@@ -3,7 +3,7 @@ var isDev = false;
 var base = 'http://selfwoke.co';
 
 if(isDev){
-    base = 'http://localhost:8000';
+   // base = 'http://localhost:8000';
 }
 
 var endpoints = {
