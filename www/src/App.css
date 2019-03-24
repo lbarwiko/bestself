@@ -9,7 +9,7 @@ form{
   background-color: #393E44;
   opacity: 0.75;
   padding: 10px;
-
+  width: 90%;
 }
 
 #root{
@@ -19,11 +19,36 @@ form{
 }
 
 .wrapper{
-    display: 'flex';
-    align-items: 'center';
-    justify-ttems:'center';
-    justify-content:'center';
+    display: flex;
+    align-items: center;
+    justify-ttems:center;
+    justify-content:center;
     padding: 30px;
     margin: 20px;
     background-color: #393E44;
+}
+
+#best-self {
+  flex-direction: column;
+}
+.wrapper > h1 {
+  color: #8AE624;
+  font-style: bold;
+  font-size: 4em;
+  text-align: center;
+}
+
+.wrapper > h2 {
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+}
+.wrapper > p{
+  color: white;
+}
+.quote {
+  background-color: #222529;
+  color: white;
+  text-align: center;
+  font-style: italic;
 }
