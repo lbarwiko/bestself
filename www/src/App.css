@@ -11,6 +11,9 @@ form{
   padding: 10px;
   width: 90%;
 }
+.form-label{
+  color:white;
+}
 
 #root{
   background-color: #222529;
