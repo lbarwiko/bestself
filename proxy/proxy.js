@@ -69,21 +69,25 @@ if(!PROD){
 }
 
 if(PROD){
-    var redirectApp = express();
-    var router = express.Router()
-    router.get('*', (req, res) => {
-        res.redirect('https://' + req.headers.host + req.url);
-    });
-    redirectApp.use(router);
-    var httpServer = http.createServer(redirectApp);
+    var httpServer = http.createServer(app);
     httpServer.listen(HTTP_PORT, function(){
-        console.log("Http redirecting on port " + HTTP_PORT);
+        console.log("Http Listening on port " + HTTP_PORT);
     });
+    // var redirectApp = express();
+    // var router = express.Router()
+    // router.get('*', (req, res) => {
+    //     res.redirect('https://' + req.headers.host + req.url);
+    // });
+    // redirectApp.use(router);
+    // var httpServer = http.createServer(redirectApp);
+    // httpServer.listen(HTTP_PORT, function(){
+    //     console.log("Http redirecting on port " + HTTP_PORT);
+    // });
 }
 
-if(PROD){
-    var httpsServer = https.createServer(credentials, app);
-    httpsServer.listen(HTTPS_PORT, function(){
-        console.log("Https Listening on port " + HTTPS_PORT);
-    });
-}
+// if(PROD){
+//     var httpsServer = https.createServer(credentials, app);
+//     httpsServer.listen(HTTPS_PORT, function(){
+//         console.log("Https Listening on port " + HTTPS_PORT);
+//     });
+// }
