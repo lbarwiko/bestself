@@ -1,10 +1,10 @@
 class User{
     constructor(params){
-        if(!param){
+        if(!params){
             return;
         }
         this.user_id = params.user_id;
-        this.username = params.user_name;
+        this.username = params.username;
     }
 }
 

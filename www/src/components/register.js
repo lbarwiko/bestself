@@ -2,16 +2,6 @@ import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 /*import Button from 'react-Bootstrap/Button';
 
-<<<<<<< HEAD
-class Register extends Component{
-    render(){
-        return (
-            <div>
-                <h2>Register</h2>
-            </div>
-        );
-     }
-=======
 
 */
 
@@ -80,8 +70,6 @@ class Register extends Component {
     );
   }
 
-
->>>>>>> landing
 }
 
 export default Register;

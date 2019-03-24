@@ -1,4 +1,4 @@
-import {User, RootUser} from 'user.model.js';
+import {User, RootUser} from './user.js';
 
 export{
     User,

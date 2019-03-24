@@ -38,7 +38,9 @@ export default (db, config) => {
                     return db.none(UserSql.create, 
                         {
                             username: payload.username,
-                            password: hashedPassword
+                            password: hashedPassword,
+                            phone_number: payload.phone_number,
+                            name: payload.name
                         }
                     )
                 })

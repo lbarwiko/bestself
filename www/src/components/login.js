@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import { Auth } from '../services/';
+import { Redirect } from 'react-router';
 
 class Login extends Component{
-<<<<<<< HEAD
-    render(){
-        return (
-            <div>
-                <h2>Login</h2>
-            </div>
-        );
-     }
-=======
+
   constructor(props){
     super(props);
     this.state = {
       valueUser: '',
-      valuePass: ''
+      valuePass: '',
+      rootUser: null
     }
   }
 
@@ -26,33 +22,63 @@ class Login extends Component{
     this.setState( {valuePass: event.target.value })
   }
 
-  handleLoginSubmit(event){
+  handleSubmit(event){
     let username = this.state.valueUser;
     let pass = this.state.valuePass;
 
-    // check in database
+    Auth.login({
+        username: username, 
+        password: pass
+    })
+    .then(rootUser=>{
+        this.setState({
+            rootUser: rootUser
+        })
+    }) 
+    .catch(err=>{
+        console.log(err);
+        alert(err);
+    })
 
+    // check in database
+    console.log(username, pass);
     event.preventDefault();
   }
   render(){
+    if(this.state.rootUser){
+        console.log("HERE");
+        return <Redirect to={{
+            pathname: '/home/',
+            state: { rootUser: this.state.rootUser }
+        }}/>;
+    }
+
     return (
-      <article>
-        <form onSubmit={(event)=>this.handleLoginSubmit(event)}>
-            <input placeholder='Username'
-                   type='text'
-                   value={this.state.valueUser}
-                   onChange={(event)=>this.handleUserChange(event)} />
-            <input placeholder='Password'
-                   type='password'
-                   value={this.state.valuePass}
-                   onChange={(event)=>this.handlePassChange(event)} />
-            <input type='submit'
-                   value='Send' />
-        </form>
-      </article>
+        <Form
+            onSubmit={e => this.handleSubmit(e)}
+        >
+            <Form.Group controlId="username">
+                <Form.Label>Username</Form.Label>
+                <Form.Control 
+                    type="username" 
+                    placeholder="Username"
+                    onChange={(event)=>this.handleUserChange(event)} 
+                 />
+            </Form.Group>
+            <Form.Group controlId="formGroupPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control 
+                    type="password" 
+                    placeholder="Password" 
+                    onChange={(event)=>this.handlePassChange(event)}
+                />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+                Login
+            </Button>
+        </Form>
     );
   }
->>>>>>> landing
 }
 
 export default Login;

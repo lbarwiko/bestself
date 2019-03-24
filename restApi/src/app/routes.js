@@ -1,9 +1,10 @@
 import express, { Router } from 'express';
-import { Users } from './controllers/'
+import { Users, Feedback } from './controllers/'
 
 export default (db, config, auth) => {
 	const router = Router();
 	const User = Users(db, config).rest;
+	const Fb = Feedback(db, config).rest;
 
 	const api = Router();
 	api.get('/', (req, res) => {
@@ -29,11 +30,16 @@ export default (db, config, auth) => {
 	meApi.get('/', auth.requireToken, User.get);
 	api.use('/me/', meApi);
 
+	const FeedbackApi = Router();
+	FeedbackApi.get('/', auth.requireToken);
+	FeedbackApi.post('/request', auth.requireToken, Fb.requestFeedback);
+	api.use('/f/', FeedbackApi);
+
 	api.get('/.well-known/acme-challenge/:id', function(req, res, next) {
 		res.send(req.params.id + '.' + 'HvBmjhjg7Ng9HAGb1bmUtrF4gqOWj8LZ56Gx5HyBBNg');
 	});
 	router.get('/', (req, res)=>{
-		res.send("Fintech Rest Api");
+		res.send("Ayyyy its our Rest Api");
 	})
 
 	return router;
