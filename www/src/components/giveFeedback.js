@@ -61,6 +61,7 @@ class giveFeedback extends Component{
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
+
                 <Container style={styles.container}>
                     <h1 style={styles.header}>Give Feedback</h1>
                     <Form >
@@ -78,7 +79,7 @@ class giveFeedback extends Component{
 
 const styles = {
     header:{
-        paddingTop: '10px'
+      paddingTop: '10px'
     },
     buttons:{
       cursor: 'pointer',
@@ -86,7 +87,6 @@ const styles = {
     },
     container:{
       backgroundColor: '#979797',
-
     }
 }
 
