@@ -17,3 +17,13 @@ form{
   height: 100vh;
   width: 100%;
 }
+
+.wrapper{
+    display: 'flex';
+    align-items: 'center';
+    justify-ttems:'center';
+    justify-content:'center';
+    padding: 30px;
+    margin: 20px;
+    background-color: #393E44;
+}
