@@ -31,7 +31,8 @@ export default (db, config, auth) => {
 	api.use('/me/', meApi);
 
 	const FeedbackApi = Router();
-	FeedbackApi.get('/', auth.requireToken);
+	FeedbackApi.get('/', auth.requireToken, Fb.list);
+	FeedbackApi.post('/', Fb.create);
 	FeedbackApi.post('/request', auth.requireToken, Fb.requestFeedback);
 	api.use('/f/', FeedbackApi);
 

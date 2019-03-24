@@ -7,9 +7,11 @@ if(isDev){
 }
 
 var endpoints = {
+    feedback: base + '/api/f/',
     user: base + '/api/u',
     auth: base + '/api/auth',
     me: base + '/api/me',
+    request: base + '/api/f/request',
     base: base,
     version: '1',
 };

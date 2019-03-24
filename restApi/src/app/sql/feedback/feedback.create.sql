@@ -1,0 +1,1 @@
+INSERT INTO FEEDBACK(user_id, comment) VALUES (${user_id}, ${comment})

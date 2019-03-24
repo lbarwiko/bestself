@@ -4,6 +4,7 @@ import Register from './register.js';
 import Splash from './splash.js';
 import RequestFeedback from './requestFeedback.js';
 import MyFeedback from './myFeedback.js';
+import GiveFeedback from './giveFeedback.js';
 
 export {
     Home,
@@ -11,5 +12,6 @@ export {
     Register,
     Splash,
     RequestFeedback,
-    MyFeedback
+    MyFeedback,
+    GiveFeedback
 }

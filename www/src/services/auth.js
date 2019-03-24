@@ -86,7 +86,7 @@ function register(params){
             username: params.username,
             password: params.password,
             phone_number: params.phone_number,
-            country_code: params.country_code
+            name: params.name
         })
     })
     .then(res=>{

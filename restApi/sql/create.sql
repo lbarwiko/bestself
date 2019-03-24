@@ -10,3 +10,8 @@ CREATE TABLE USERS(
 	phone_number VARCHAR(16),
 	name VARCHAR(40)
 );
+
+CREATE TABLE FEEDBACK(
+	user_id INTEGER NOT NULL,
+	comment VARCHAR(2000)
+)

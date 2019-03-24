@@ -13,6 +13,26 @@ class RootUser extends User{
         super(params);
         this.token = params.token;
     }
+
+    fetch(url, options={}){
+        if(!options.headers){
+            options.headers = {};
+        }
+        options.headers['Authorization'] = this.getToken();
+        return fetch(url, options);
+    }
+
+    fetchJSON(url, options={}){
+        return this.fetch(url, options)
+        .then(res=>{
+            return res.json();
+        })
+        .catch(err=> Promise.reject(err));
+    }
+
+    getToken(){
+        return this.token;
+    }
     
 }  
 
