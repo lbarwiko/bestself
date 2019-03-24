@@ -10,12 +10,12 @@ class Main extends React.Component{
   }
 
   componentDidMount(){
-  }    
+  }
 
   render(){
       return (
           <div>
-            
+
           </div>
       );
    }

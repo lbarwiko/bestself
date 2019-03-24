@@ -61,14 +61,14 @@ class giveFeedback extends Component{
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-                <Container >
+                <Container style={styles.container}>
                     <h1 style={styles.header}>Give Feedback</h1>
                     <Form >
                         <Form.Group controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Where does this person excel?</Form.Label>
                             <Form.Control  onChange={(event)=>this.handleChange(event)} as="textarea" rows="3" />
                         </Form.Group>
-                        <Button style={styles.buttons} variant='primary' onClick={this.handleSubmit} onMobile>Submit</Button>
+                        <Button variant='primary' onClick={this.handleSubmit} onMobile>Submit</Button>
                     </Form>
                 </Container>
             </div>
@@ -81,7 +81,12 @@ const styles = {
         paddingTop: '10px'
     },
     buttons:{
-      cursor: 'pointer'
+      cursor: 'pointer',
+      backgroundColor: '#8AE624'
+    },
+    container:{
+      backgroundColor: '#979797',
+
     }
 }
 
