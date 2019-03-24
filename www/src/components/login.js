@@ -78,12 +78,56 @@ class Login extends Component{
                         <Carousel.Item>
                             <img
                             className="d-block w-100"
-                            src="holder.js/800x400?text=First slide&bg=373940"
+                            src="./onboarding1.png"
                             alt="First slide"
                             />
                             <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>What we do</h3>
+                            <p>We take the praises from the people in your network that you trust and help you build your best-self portrait.</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src="./onboarding2.png"
+                            alt="Second slide"
+                            />
+                            <Carousel.Caption>
+                            <h3>What are we</h3>
+                            <p>We do it all through the platform - connecting you and your network and compling how special you are to them.</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src="./onboarding3.png"
+                            alt="Third slide"
+                            />
+                            <Carousel.Caption>
+                            <h3>Step One</h3>
+                            <p>Enlist Your Praise Squad</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src="./onboarding4.png"
+                            alt="Fourth slide"
+                            />
+                            <Carousel.Caption>
+                            <h3>Step Two</h3>
+                            <p>Send Praise Invitations</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src="./onboarding5.png"
+                            alt="Fourth slide"
+                            />
+                            <Carousel.Caption>
+                            <h3>Step Three</h3>
+                            <p>We'll Take Care of the Rest ;)</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
@@ -134,7 +178,6 @@ const styles = {
         opacity: 1,
       },
       carousel:{
-          marginTop: 100
       }
 }
 

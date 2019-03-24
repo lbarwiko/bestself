@@ -18,7 +18,7 @@ form{
 .wrapper{
     display: 'flex';
     align-items: 'center';
-    justify-ttems:'center';
+    justify-items:'center';
     justify-content:'center';
     padding: 30px;
     margin: 20px;
