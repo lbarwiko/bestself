@@ -1,6 +1,6 @@
-var isDev = true;
+var isDev = false;
 
-var base = 'http://138.68.44.59';
+var base = 'http://selfwoke.co';
 
 if(isDev){
     base = 'http://localhost:8000';
