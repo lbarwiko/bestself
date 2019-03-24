@@ -62,7 +62,7 @@ class giveFeedback extends Component{
                     </Navbar.Collapse>
                 </Navbar>
 
-                <Container style={styles.container}>
+                <Container>
                     <h1 style={styles.header}>Give Feedback</h1>
                     <Form >
                         <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -79,15 +79,14 @@ class giveFeedback extends Component{
 
 const styles = {
     header:{
-      paddingTop: '10px'
+      paddingTop: '10px',
+      color: '#8AE624';
     },
     buttons:{
       cursor: 'pointer',
       backgroundColor: '#8AE624'
     },
-    container:{
-      backgroundColor: '#979797',
-    }
+
 }
 
 export default giveFeedback;
