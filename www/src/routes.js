@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Login, Register, Splash, GiveFeedback } from './components';
+import { Home, Login, Register, Splash, GiveFeedback, About, Landing, Methods } from './components';
 import {Route, Switch, Redirect } from 'react-router-dom';
 
 
@@ -12,6 +12,9 @@ const Routes = () =>{
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/register' component={Register} />
                 <Route exact path="/u/:userId" component={GiveFeedback} />
+                <Route exact path='/about' component={About} />
+                <Route exact path='/landing' component={Landing} />
+                <Route exact path='/methods' component={Methods} />
             </Switch>
         </div>
     )

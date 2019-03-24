@@ -5,6 +5,8 @@ import Splash from './splash.js';
 import RequestFeedback from './requestFeedback.js';
 import MyFeedback from './myFeedback.js';
 import GiveFeedback from './giveFeedback.js';
+import Methods from './method.js';
+import About from './about.js';
 
 export {
     Home,
@@ -13,5 +15,7 @@ export {
     Splash,
     RequestFeedback,
     MyFeedback,
-    GiveFeedback
+    GiveFeedback,
+    About,
+    Methods
 }
