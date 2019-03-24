@@ -51,7 +51,7 @@ class giveFeedback extends Component{
                     <Navbar.Brand href="">Self Woke</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mr-auto">                           
+                        <Nav className="mr-auto">
                         </Nav>
                         <Nav>
                             <Nav.Link href="#deets">About</Nav.Link>
@@ -63,12 +63,12 @@ class giveFeedback extends Component{
                 </Navbar>
                 <Container >
                     <h1 style={styles.header}>Give Feedback</h1>
-                    <Form>
+                    <Form >
                         <Form.Group controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Where does this person excel?</Form.Label>
                             <Form.Control  onChange={(event)=>this.handleChange(event)} as="textarea" rows="3" />
                         </Form.Group>
-                        <Button variant='primary' onClick={this.handleSubmit}>Submit</Button>
+                        <Button style={styles.buttons} variant='primary' onClick={this.handleSubmit} onMobile>Submit</Button>
                     </Form>
                 </Container>
             </div>
@@ -79,6 +79,9 @@ class giveFeedback extends Component{
 const styles = {
     header:{
         paddingTop: '10px'
+    },
+    buttons:{
+      cursor: 'pointer'
     }
 }
 
