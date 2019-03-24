@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {Login, RequestFeedback, MyFeedback} from './index.js';
+import {Login, RequestFeedback, MyFeedback, About, Landing, Methods} from './index.js';
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import { Redirect } from 'react-router';
 
@@ -35,7 +35,7 @@ class Home extends Component{
                         <Nav className="mr-auto">
                         <Nav.Link>
                             <Link to={{
-                                pathname: "./feedback",
+                                pathname: "/home/feedback",
                                 state: {
                                     rootUser: this.state.rootUser
                                 }
@@ -45,7 +45,7 @@ class Home extends Component{
                         </Nav.Link>
                         <Nav.Link>
                             <Link to={{
-                                pathname: "./profile",
+                                pathname: "/home/profile",
                                 state: {
                                     rootUser: this.state.rootUser
                                 }
@@ -55,8 +55,26 @@ class Home extends Component{
                         </Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">About</Nav.Link>
-                            <Nav.Link href="#methods">Methodology</Nav.Link>
+                            <Nav.Link>
+                                <Link to={{
+                                    pathname: "/about",
+                                    state: {
+                                        rootUser: this.state.rootUser
+                                    }
+                                }}>
+                                About
+                                </Link>
+                            </Nav.Link>
+                            <Nav.Link>
+                                <Link to={{
+                                    pathname: "/methods",
+                                    state: {
+                                        rootUser: this.state.rootUser
+                                    }
+                                }}>
+                                Methods
+                                </Link>
+                            </Nav.Link>
                             <Nav.Link eventKey={2} href="https://github.com/lbarwiko/bestself">Github</Nav.Link>
 
                         </Nav>
@@ -65,6 +83,9 @@ class Home extends Component{
                 <Route exact path="/home" render={(props) => <RequestFeedback {...props} rootUser={this.state.rootUser} />} />
                 <Route path="/home/feedback" component={RequestFeedback} />
                 <Route path="/home/profile" component={MyFeedback} />
+                <Route exact path='/about' component={About} />
+                <Route exact path='/landing' component={Landing} />
+                <Route exact path='/methods' component={Methods} />
             
 
             </Router>
